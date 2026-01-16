@@ -2,7 +2,6 @@
 
 import { useState } from 'react'
 import { FilterOptions } from '@/types'
-import { formatPrice } from '@/lib/utils'
 
 interface FilterSidebarProps {
   filterOptions: FilterOptions
@@ -18,14 +17,11 @@ export default function FilterSidebar({
   filterOptions,
   selectedCategories,
   selectedBrands,
-  priceRange,
   onCategoryChange,
   onBrandChange,
-  onPriceRangeChange,
 }: FilterSidebarProps) {
   const [categoryExpanded, setCategoryExpanded] = useState(true)
   const [brandExpanded, setBrandExpanded] = useState(true)
-  const [priceExpanded, setPriceExpanded] = useState(true)
 
   const handleCategoryToggle = (category: string) => {
     if (selectedCategories.includes(category)) {
@@ -46,10 +42,9 @@ export default function FilterSidebar({
   const clearAllFilters = () => {
     onCategoryChange([])
     onBrandChange([])
-    onPriceRangeChange(null)
   }
 
-  const hasActiveFilters = selectedCategories.length > 0 || selectedBrands.length > 0 || priceRange !== null
+  const hasActiveFilters = selectedCategories.length > 0 || selectedBrands.length > 0
 
   return (
     <div className="card p-6 sticky top-24">
@@ -148,74 +143,22 @@ export default function FilterSidebar({
         )}
       </div>
 
-      {/* Price Range Filter */}
-      <div className="mb-6">
-        <button
-          onClick={() => setPriceExpanded(!priceExpanded)}
-          className="flex items-center justify-between w-full mb-4 group"
-        >
-          <h3 className="text-sm font-semibold text-gray-900 uppercase tracking-wider">
-            Price Range
-          </h3>
-          <svg
-            className={`w-5 h-5 text-gray-400 transition-transform ${priceExpanded ? 'rotate-180' : ''}`}
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+      {/* Price Info - Since all products are "Request a Quote" */}
+      <div className="bg-blue-50 p-4 rounded-lg border border-blue-200">
+        <div className="flex items-start gap-3">
+          <svg className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
-        </button>
-
-        {priceExpanded && (
-          <div className="space-y-4">
-            <div className="flex items-center gap-3">
-              <input
-                type="number"
-                placeholder="Min"
-                value={priceRange?.min || ''}
-                onChange={(e) => {
-                  const min = Number(e.target.value)
-                  onPriceRangeChange({
-                    min: min || filterOptions.priceRange.min,
-                    max: priceRange?.max || filterOptions.priceRange.max,
-                  })
-                }}
-                className="input text-sm"
-              />
-              <span className="text-gray-400">to</span>
-              <input
-                type="number"
-                placeholder="Max"
-                value={priceRange?.max || ''}
-                onChange={(e) => {
-                  const max = Number(e.target.value)
-                  onPriceRangeChange({
-                    min: priceRange?.min || filterOptions.priceRange.min,
-                    max: max || filterOptions.priceRange.max,
-                  })
-                }}
-                className="input text-sm"
-              />
-            </div>
-            <div className="text-xs text-gray-500 text-center">
-              {formatPrice(filterOptions.priceRange.min)} - {formatPrice(filterOptions.priceRange.max)}
-            </div>
-            {priceRange && (
-              <button
-                onClick={() => onPriceRangeChange(null)}
-                className="text-sm text-blue-600 hover:text-blue-700 font-semibold w-full"
-              >
-                Reset Price Range
-              </button>
-            )}
+          <div>
+            <h4 className="text-sm font-semibold text-gray-900 mb-1">Pricing</h4>
+            <p className="text-xs text-gray-600">All products are available on a quote basis. Request a quote to get customized pricing for your needs.</p>
           </div>
-        )}
+        </div>
       </div>
 
       {/* Active Filters Summary */}
       {hasActiveFilters && (
-        <div className="pt-6 border-t border-gray-200">
+        <div className="pt-6 border-t border-gray-200 mt-6">
           <h4 className="text-sm font-semibold text-gray-900 mb-3">Active Filters</h4>
           <div className="flex flex-wrap gap-2">
             {selectedCategories.map((category) => (

@@ -826,14 +826,15 @@ export function getFeaturedProducts(): Product[] {
 export function getFilterOptions(): FilterOptions {
   const categories = [...new Set(products.map(p => p.category))]
   const brands = [...new Set(products.map(p => p.brand))]
-  const prices = products.map(p => p.price)
   
+  // Since prices are now strings ("Request a Quote"), we can't use numeric ranges
+  // Return placeholder values or remove price filtering
   return {
     categories: categories.sort(),
     brands: brands.sort(),
     priceRange: {
-      min: Math.min(...prices),
-      max: Math.max(...prices),
+      min: 0,
+      max: 0, // Price filtering disabled for quote-based products
     },
   }
 }
@@ -869,20 +870,23 @@ export function filterAndSortProducts(
     filtered = filtered.filter(p => selectedBrands.includes(p.brand))
   }
 
-  // Price range filter
-  if (priceRange) {
-    filtered = filtered.filter(p => 
-      p.price >= priceRange.min && p.price <= priceRange.max
-    )
-  }
+  // Price range filter - SKIP since all prices are "Request a Quote"
+  // If you have numeric prices in the future, uncomment this:
+  // if (priceRange) {
+  //   filtered = filtered.filter(p => {
+  //     const price = typeof p.price === 'number' ? p.price : 0
+  //     return price >= priceRange.min && price <= priceRange.max
+  //   })
+  // }
 
   // Sorting
   const sorted = [...filtered].sort((a, b) => {
     switch (sortBy) {
       case 'price-asc':
-        return a.price - b.price
       case 'price-desc':
-        return b.price - a.price
+        // Can't sort by price when prices are strings
+        // Fall back to name sorting
+        return a.name.localeCompare(b.name)
       case 'name-asc':
         return a.name.localeCompare(b.name)
       case 'name-desc':

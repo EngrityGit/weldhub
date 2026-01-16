@@ -37,10 +37,9 @@ export default function SubHeader({
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  // Updated sort options - removed price sorting since all products are "Request a Quote"
   const sortOptions = [
     { value: 'newest' as SortOption, label: 'Newest First' },
-    { value: 'price-asc' as SortOption, label: 'Price: Low to High' },
-    { value: 'price-desc' as SortOption, label: 'Price: High to Low' },
     { value: 'name-asc' as SortOption, label: 'Name: A to Z' },
     { value: 'name-desc' as SortOption, label: 'Name: Z to A' },
   ]
@@ -155,7 +154,7 @@ export default function SubHeader({
         </div>
 
         {/* Bottom Row: Results Count */}
-        <div className="flex items-center justify-between text-sm py-2">
+        <div className="flex items-center justify-between text-sm">
           <p className="text-gray-600">
             <span className="font-semibold text-gray-900">{totalResults}</span> products found
           </p>
