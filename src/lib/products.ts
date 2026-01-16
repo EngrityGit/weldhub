@@ -78,8 +78,8 @@ export const products: Product[] = [
       establishedYear: 2000,
       description: 'Leading manufacturer of industrial weld cameras and thermal imaging systems',
       website: 'https://www.xiris.com',
-      email: 'info@xiris.com',
-      phone: '+1-888-888-8888'
+      email: 'sales@engrity.com',
+      phone: '1 (780) 800-6297'
     },
     
     inStock: true,
@@ -171,8 +171,8 @@ export const products: Product[] = [
       establishedYear: 2000,
       description: 'Leading manufacturer of industrial weld cameras and thermal imaging systems',
       website: 'https://www.xiris.com',
-      email: 'info@xiris.com',
-      phone: '+1-888-888-8888'
+      email: 'sales@engrity.com',
+      phone: '1 (780) 800-6297'
     },
     
     inStock: true,
@@ -263,8 +263,8 @@ export const products: Product[] = [
       establishedYear: 2000,
       description: 'Leading manufacturer of industrial weld cameras and thermal imaging systems',
       website: 'https://www.xiris.com',
-      email: 'info@xiris.com',
-      phone: '+1-888-888-8888'
+      email: 'sales@engrity.com',
+      phone: '1 (780) 800-6297'
     },
     
     inStock: true,
@@ -355,8 +355,8 @@ export const products: Product[] = [
       establishedYear: 2000,
       description: 'Leading manufacturer of industrial weld cameras and thermal imaging systems',
       website: 'https://www.xiris.com',
-      email: 'info@xiris.com',
-      phone: '+1-888-888-8888'
+      email: 'sales@engrity.com',
+      phone: '1 (780) 800-6297'
     },
     
     inStock: true,
@@ -454,8 +454,8 @@ export const products: Product[] = [
       establishedYear: 2000,
       description: 'Leading manufacturer of industrial weld cameras and thermal imaging systems',
       website: 'https://www.xiris.com',
-      email: 'info@xiris.com',
-      phone: '+1-888-888-8888'
+      email: 'sales@engrity.com',
+      phone: '1 (780) 800-6297'
     },
     
     inStock: true,
@@ -547,8 +547,8 @@ export const products: Product[] = [
       establishedYear: 2000,
       description: 'Leading manufacturer of industrial weld cameras and thermal imaging systems',
       website: 'https://www.xiris.com',
-      email: 'info@xiris.com',
-      phone: '+1-888-888-8888'
+      email: 'sales@engrity.com',
+      phone: '1 (780) 800-6297'
     },
     
     inStock: true,
@@ -629,8 +629,8 @@ export const products: Product[] = [
     establishedYear: 1997,
     description: 'Canadian provider of robotic welding automation systems and industrial integration solutions.',
     website: 'https://www.weldmatic.ca',
-    email: 'info@weldmatic.ca',
-    phone: null
+    email: 'sales@engrity.com',
+    phone: 'null'
   },
 
   inStock: true,
@@ -707,8 +707,8 @@ export const products: Product[] = [
     establishedYear: 1997,
     description: 'Canadian provider of robotic welding automation systems and industrial integration solutions.',
     website: 'https://www.weldmatic.ca',
-    email: 'info@weldmatic.ca',
-    phone: null
+    email: 'sales@engrity.com',
+    phone: 'null'
   },
 
   inStock: true,
@@ -781,8 +781,8 @@ export const products: Product[] = [
     establishedYear: 1997,
     description: 'Canadian provider of robotic welding automation systems and industrial integration solutions.',
     website: 'https://www.weldmatic.ca',
-    email: 'info@weldmatic.ca',
-    phone: null
+    email: 'sales@engrity.com',
+    phone: "null"
   },
 
   inStock: true,

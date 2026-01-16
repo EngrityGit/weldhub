@@ -15,7 +15,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'),
   title: {
-    default: 'WeldHub - Industrial Weld Cameras & Thermal Imaging',
+    default: 'WeldHub - Industrial Equipment Marketplace',
     template: '%s | WeldHub',
   },
   description: 'Leading manufacturer of industrial weld cameras, thermal imaging systems, and inspection solutions for welding, additive manufacturing, and quality control.',
@@ -27,7 +27,9 @@ export const metadata: Metadata = {
     'SWIR cameras',
     'metal additive manufacturing',
     'weld monitoring',
-    'quality control'
+    'quality control',
+    'robotic welding',
+    'robotic arm'
   ],
   authors: [{ name: 'WeldHub' }],
   creator: 'WeldHub',
@@ -54,7 +56,7 @@ export const metadata: Metadata = {
   // Twitter Card
   twitter: {
     card: 'summary_large_image',
-    title: 'WeldHub - Industrial Weld Cameras',
+    title: 'WeldHub - Industrial Equipment Marketplace',
     description: 'Leading manufacturer of industrial weld cameras and thermal imaging systems.',
     images: ['/images/og-image.jpg'],
   },
