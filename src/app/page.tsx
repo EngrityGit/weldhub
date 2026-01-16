@@ -4,8 +4,8 @@ import ProductCard from '@/components/ui/ProductCard'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Home - Industrial Weld Cameras & Thermal Imaging',
-  description: 'Discover industrial-grade weld cameras, thermal imaging systems, and inspection solutions. Precision technology for welding and manufacturing.',
+  title: 'WeldHub - Industrial Equipment Marketplace',
+  description: 'Discover the Best industrial-grade weld cameras, thermal imaging systems, and inspection solutions all in Engrity WeldHub. Precision technology for welding and manufacturing.',
 }
 
 export default function HomePage() {
@@ -25,8 +25,8 @@ export default function HomePage() {
             </div>
             
             <h1 className="heading-1 mb-6 animate-fade-in" style={{ animationDelay: '0.1s' }}>
-              Industrial Weld Cameras &{' '}
-              <span className="text-blue-600">Thermal Imaging</span>
+              Industrial Welding Equipment{' '}
+              <span className="text-blue-600">Marketplace</span>
             </h1>
             
             <p className="text-xl text-gray-600 mb-10 leading-relaxed max-w-2xl animate-fade-in" style={{ animationDelay: '0.2s' }}>
