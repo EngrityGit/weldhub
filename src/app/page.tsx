@@ -30,7 +30,7 @@ export default function HomePage() {
             </h1>
             
             <p className="text-xl text-gray-600 mb-10 leading-relaxed max-w-2xl animate-fade-in" style={{ animationDelay: '0.2s' }}>
-              Trusted by Industrial Giants for Decades
+              Your Trusted Industrial Partner
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 animate-fade-in" style={{ animationDelay: '0.3s' }}>
@@ -56,7 +56,7 @@ export default function HomePage() {
 
 
       {/* Promotional Banner */}
-      {/* <section className="py-8 bg-gradient-to-r from-blue-600 to-blue-700">
+      <section className="py-8 bg-gradient-to-r from-blue-600 to-blue-700">
         <div className="container-custom">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-white">
             <div className="flex items-center gap-4">
@@ -75,7 +75,7 @@ export default function HomePage() {
             </Link>
           </div>
         </div>
-      </section> */}
+      </section>
 
       {/* Featured Products Section */}
       <section className="section">
