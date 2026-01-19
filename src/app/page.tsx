@@ -16,7 +16,7 @@ export default function HomePage() {
   return (
     <>
       {/* Hero Section - Minimal & Modern */}
-      <section className="relative bg-white overflow-hidden">
+      <section className="relative  overflow-hidden">
         <div className="container-custom py-20 md:py-28 relative z-10">
           <div className="max-w-4xl">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 rounded-full mb-6 animate-fade-in">
