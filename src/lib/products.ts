@@ -801,7 +801,98 @@ export const products: Product[] = [
     ogImage: '/images/products/rmc203.png',
     canonicalUrl: '/products/rmc-203-robotic-plc-controller'
   }
+},
+{
+  id: '10',
+  slug: 'rm-1800-25-robotic-laser-welding',
+  name: 'RM 1800/25 Robotic Laser Welding Arm',
+  description: '6-axis industrial robotic arm designed for high-precision laser welding applications.',
+  longDescription:
+    'The RM 1800/25 is a heavy-duty 6-axis robotic arm engineered for robotic laser welding and advanced automation tasks. With a working range of up to 1808 mm, a rated payload of 25 kg, and repeatability of ±0.03 mm, it delivers exceptional accuracy, speed, and reliability. Designed for harsh industrial environments, the robot features IP67 protection, flexible mounting options (floor, wall, or overhead), and seamless integration with external axes, positioning systems, and leading laser welding power sources.',
+
+  price: 'Request a Quote',
+  category: 'Robotic Arms',
+  brand: 'Weldmatic',
+  badge: 'INDUSTRIAL',
+
+  images: [
+    '/images/products/rm1880.png',
+    '/images/products/rm18802.png',
+    '/images/products/rm18803.png'
+  ],
+
+  videos: [],
+
+  specifications: {
+    'Number of Axes': '6',
+    'Working Range': '712 – 1808 mm',
+    'Rated Payload': '25 kg (55.1 lb)',
+    'Repeatability': '±0.03 mm',
+    'Mounting Positions': 'Floor, Wall, Overhead',
+    'Protection Rating': 'IP67',
+    'Controller': 'RMC 203',
+    'Average Power Consumption': '3 kWh',
+    'Base Dimensions': '298 × 286 mm (11.7 × 11.3 in)',
+    'Robot Weight': '198 kg (436.5 lb)'
+  },
+
+  features: [
+    'High-precision 6-axis robotic motion',
+    'Optimized for robotic laser welding applications',
+    'IP67-rated for harsh industrial environments',
+    'Wide working envelope with extended reach',
+    'High-speed axis movement for cycle-time optimization',
+    'Supports external axes, positioners, and tracks',
+    'Compatible with major laser welding power sources',
+    'Flexible mounting: floor, wall, or overhead'
+  ],
+
+  applications: [
+    'Robotic Laser Welding Cells',
+    'Automotive and Structural Welding',
+    'Pipe and Tube Welding Automation',
+    'Heavy Fabrication and Manufacturing',
+    'Integrated Robotic Welding Lines',
+    'Custom Industrial Automation Systems'
+  ],
+
+  seller: {
+    name: 'Weldmatic Automation Inc.',
+    logo: null,
+    avatar: 'WA',
+    rating: 4.8,
+    totalReviews: 86,
+    location: 'Surrey, BC & Mississauga, ON, Canada',
+    verified: true,
+    establishedYear: 1997,
+    description:
+      'Canadian provider of robotic welding automation systems, robotic arms, laser welding solutions, and industrial integration services.',
+    website: 'https://www.weldmatic.ca',
+    email: 'sales@engrity.com',
+    phone: null
+  },
+
+  inStock: true,
+  featured: true,
+  createdAt: '2026-01-19',
+
+  seo: {
+    title: 'RM 1800/25 Robotic Laser Welding Arm | Weldmatic Automation',
+    description:
+      'Industrial 6-axis robotic arm for laser welding applications with 25 kg payload, IP67 protection, and high precision motion control.',
+    keywords: [
+      'robotic laser welding',
+      'industrial robotic arm',
+      '6-axis robot',
+      'laser welding robot',
+      'weldmatic robotic arm',
+      'robotic welding automation'
+    ],
+    ogImage: '/images/products/rm1800-25.png',
+    canonicalUrl: '/products/rm-1800-25-robotic-laser-welding'
+  }
 }
+
 
 
 ]
