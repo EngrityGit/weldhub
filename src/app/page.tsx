@@ -21,16 +21,16 @@ export default function HomePage() {
           <div className="max-w-4xl">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 rounded-full mb-6 animate-fade-in">
               <span className="w-2 h-2 bg-blue-600 rounded-full animate-pulse" />
-              <span className="text-sm font-semibold text-blue-600">Industry Leading Technology</span>
+              <span className="text-sm font-semibold text-blue-600">Industrial Equipments</span>
             </div>
             
             <h1 className="heading-1 mb-6 animate-fade-in" style={{ animationDelay: '0.1s' }}>
-              Industrial Welding Equipment{' '}
-              <span className="text-blue-600">Marketplace</span>
+              Engrity{' '}
+              <span className="text-blue-600">WeldHub</span>
             </h1>
             
             <p className="text-xl text-gray-600 mb-10 leading-relaxed max-w-2xl animate-fade-in" style={{ animationDelay: '0.2s' }}>
-              Precision monitoring technology for welding, additive manufacturing, and quality control applications. Trusted by industry leaders worldwide.
+              Trusted by Industrial Giants for Decades
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 animate-fade-in" style={{ animationDelay: '0.3s' }}>
@@ -56,7 +56,7 @@ export default function HomePage() {
 
 
       {/* Promotional Banner */}
-      <section className="py-8 bg-gradient-to-r from-blue-600 to-blue-700">
+      {/* <section className="py-8 bg-gradient-to-r from-blue-600 to-blue-700">
         <div className="container-custom">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-white">
             <div className="flex items-center gap-4">
@@ -75,7 +75,7 @@ export default function HomePage() {
             </Link>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Featured Products Section */}
       <section className="section">

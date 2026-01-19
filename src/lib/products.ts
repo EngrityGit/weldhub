@@ -869,7 +869,7 @@ export const products: Product[] = [
       'Canadian provider of robotic welding automation systems, robotic arms, laser welding solutions, and industrial integration services.',
     website: 'https://www.weldmatic.ca',
     email: 'sales@engrity.com',
-    phone: null
+    phone: 'null'
   },
 
   inStock: true,
