@@ -1,21 +1,20 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { cookies } from 'next/headers'
 
 export async function POST(request: NextRequest) {
   try {
     const { email, password } = await request.json()
 
-    // Get admin credentials from environment variables
     const adminEmail = process.env.ADMIN_EMAIL || 'sales@engrity.com'
     const adminPassword = process.env.ADMIN_PASSWORD || 'Winter_25!'
 
-    // Verify credentials
     if (email === adminEmail && password === adminPassword) {
-      // Create a simple session token
-      const sessionToken = Buffer.from(`${email}:${Date.now()}`).toString('base64')
-      
-      // Set cookie
-      cookies().set('admin_session', sessionToken, {
+      const sessionToken = Buffer
+        .from(`${email}:${Date.now()}`)
+        .toString('base64')
+
+      const response = NextResponse.json({ success: true })
+
+      response.cookies.set('admin_session', sessionToken, {
         httpOnly: true,
         secure: process.env.NODE_ENV === 'production',
         sameSite: 'lax',
@@ -23,7 +22,7 @@ export async function POST(request: NextRequest) {
         path: '/',
       })
 
-      return NextResponse.json({ success: true })
+      return response
     }
 
     return NextResponse.json(
@@ -39,5 +38,8 @@ export async function POST(request: NextRequest) {
 }
 
 export async function GET() {
-  return NextResponse.json({ error: 'Method not allowed' }, { status: 405 })
+  return NextResponse.json(
+    { error: 'Method not allowed' },
+    { status: 405 }
+  )
 }
