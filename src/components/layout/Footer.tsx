@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 
 export default function Footer() {
@@ -10,9 +11,13 @@ export default function Footer() {
           {/* Company Info */}
           <div>
             <div className="flex items-center space-x-2 mb-4">
-              {/* <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">WH</span>
-              </div> */}
+<Image
+  src="/WeldHub.svg"
+  alt="WeldHub Logo"
+  width={140}
+  height={36}
+  className="h-12 w-auto object-contain"
+/>
               <span className="text-xl font-bold text-white">
                 WeldHub
               </span>

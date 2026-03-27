@@ -891,8 +891,369 @@ export const products: Product[] = [
     ogImage: '/images/products/rm1800-25.png',
     canonicalUrl: '/products/rm-1800-25-robotic-laser-welding'
   }
-}
+},
 
+{
+    id: '11',
+    slug: 'olympus-focus-px-32128pr',
+    name: 'Olympus Focus PX 32128PR',
+    description: 'High-performance phased array and UT data acquisition unit for automated inspection.',
+    longDescription:
+      'The Focus PX is a powerful, dedicated acquisition unit designed for automated ultrasonic testing (AUT). It features 32:128PR phased array capabilities and is built for seamless integration into high-volume manufacturing environments. Ideal for aerospace, automotive, and pipeline applications where high data throughput and signal quality are mandatory.',
+    price: 'Request a Quote',
+    category: 'NDT Equipment',
+    brand: 'Olympus',
+    badge: 'AUTOMATED UT',
+    images: [
+      '/images/products/focus.png'
+    ],
+    videos: [],
+    specifications: {
+      'Configuration': '32:128PR',
+      'Technology': 'Phased Array / Conventional UT',
+      'Data Throughput': 'Up to 30 MB/s',
+      'Operating Temp': '0°C to 45°C',
+      'Enclosure': 'IP65 Rated',
+      'Interface': 'Ethernet'
+    },
+    features: [
+      'Fast and scalable automated ultrasonic testing',
+      'Seamless integration with FocusPC and Winspect',
+      'Exceptional signal-to-noise ratio',
+      'Rugged design for industrial production lines',
+      'Supports high-speed data acquisition'
+    ],
+    applications: [
+      'Aerospace Component Inspection',
+      'Automotive Manufacturing Quality Control',
+      'Weld Inspection Automation',
+      'Heavy Industrial Production Lines'
+    ],
+    seller: {
+      name: 'Pine Environmental',
+      logo: null,
+      avatar: 'PE',
+      rating: 4.9,
+      totalReviews: 142,
+      location: 'Edmonton, AB',
+      verified: true,
+      establishedYear: 1995,
+      description: 'North America’s leading provider of environmental, NDT, RVI, and HMS equipment rentals and sales.',
+      website: 'https://www.pine-environmental.com',
+      email: 'sales@engrity.com',
+      phone: 'null'
+    },
+    inStock: true,
+    featured: true,
+    createdAt: '2026-02-10',
+    seo: {
+      title: 'Olympus Focus PX 32128PR | Pine Environmental Edmonton',
+      description: 'Buy or rent the Olympus Focus PX 32128PR phased array unit in Edmonton. High-speed automated UT acquisition for industrial manufacturing.',
+      keywords: ['Olympus Focus PX', 'phased array UT', 'automated ultrasonic testing', 'NDT Edmonton', 'industrial inspection'],
+      ogImage: '/images/products/focus.png',
+      canonicalUrl: '/products/olympus-focus-px-32128pr'
+    }
+  },
+  {
+    id: '12',
+    slug: 'olympus-omniscan-mx2-1664-p2',
+    name: 'Olympus Omniscan MX2 1664 P2',
+    description: 'Portable phased array flaw detector with high-resolution touchscreen and advanced analysis tools.',
+    longDescription:
+      'The OmniScan MX2 is the industry standard for portable phased array flaw detection. This 16:64 P2 configuration provides high-speed testing, simplified workflows, and advanced analysis tools. It is compatible with a wide range of modules and scanners, making it the most versatile tool for NDT professionals worldwide.',
+    price: 'Request a Quote',
+    category: 'NDT Equipment',
+    brand: 'Olympus',
+    badge: 'INDUSTRY STANDARD',
+    images: [
+      '/images/products/omniscan.jpg'
+    ],
+    videos: [],
+    specifications: {
+      'Configuration': '16:64PR',
+      'Display': '10.4 inch Touchscreen',
+      'Data Storage': 'SD Card / USB',
+      'Battery Life': '6 hours',
+      'Weight': '3.2 kg (7.0 lb)'
+    },
+    features: [
+      'Intuitive touchscreen interface',
+      'Multi-group support for simultaneous PA and UT',
+      'Full TCG and DAC curve support',
+      'Weld overlay and setup wizard included',
+      'Fast data throughput for large file analysis'
+    ],
+    applications: [
+      'Pressure Vessel Weld Inspection',
+      'Corrosion Mapping',
+      'Composite Material Testing',
+      'Pipe and Tube Inspection'
+    ],
+    seller: {
+      name: 'Pine Environmental',
+      logo: null,
+      avatar: 'PE',
+      rating: 4.9,
+      totalReviews: 142,
+      location: 'Edmonton, AB',
+      verified: true,
+      establishedYear: 1995,
+      description: 'North America’s leading provider of environmental, NDT, RVI, and HMS equipment rentals and sales.',
+      website: 'https://www.pine-environmental.com',
+      email: 'sales@engrity.com',
+      phone: 'null'
+    },
+    inStock: true,
+    featured: true,
+    createdAt: '2026-02-11',
+    seo: {
+      title: 'Olympus Omniscan MX2 1664 P2 | Portable Phased Array',
+      description: 'Get a quote for the Olympus Omniscan MX2 1664 P2. The most trusted portable NDT tool for weld inspection and flaw detection.',
+      keywords: ['Omniscan MX2', 'phased array flaw detector', 'Olympus NDT', 'NDT equipment rental', 'weld inspection'],
+      ogImage: '/images/products/omniscan.jpg',
+      canonicalUrl: '/products/olympus-omniscan-mx2-1664-p2'
+    }
+  },
+  {
+    id: '13',
+    slug: 'eddyfi-pipescan-hd-127-flat',
+    name: 'EddyFi Pipescan HD 127xFLAT',
+    description: 'High-definition Magnetic Flux Leakage (MFL) pipe inspection system.',
+    longDescription:
+      'The Pipescan HD is designed for the rapid detection of corrosion in carbon steel pipes and storage tanks. Featuring high-definition sensors, it provides unmatched sensitivity and detection probability compared to traditional MFL systems. No couplant is required, allowing for extremely fast scanning speeds across flat surfaces and large diameter pipes.',
+    price: 'Request a Quote',
+    category: 'NDT Equipment',
+    brand: 'EddyFi',
+    badge: 'MFL TECHNOLOGY',
+    images: [
+      '/images/products/eddy.png'
+    ],
+    videos: [],
+    specifications: {
+      'Technology': 'MFL (Magnetic Flux Leakage)',
+      'Pipe Range': '100 mm to Flat',
+      'Scanning Speed': 'Up to 1 m/s',
+      'Battery Life': '8+ hours',
+      'Connectivity': 'Bluetooth / USB'
+    },
+    features: [
+      'High-definition mapping of corrosion',
+      'No couplant required for fast data collection',
+      'Adjustable for various pipe diameters',
+      'Instant PDF reporting on-site',
+      'Rugged construction for field use'
+    ],
+    applications: [
+      'Refinery Pipe Inspection',
+      'Storage Tank Wall Scanning',
+      'Oil & Gas Asset Integrity',
+      'Large Diameter Pipe Inspection'
+    ],
+    seller: {
+      name: 'Pine Environmental',
+      logo: null,
+      avatar: 'PE',
+      rating: 4.9,
+      totalReviews: 142,
+      location: 'Edmonton, AB',
+      verified: true,
+      establishedYear: 1995,
+      description: 'North America’s leading provider of environmental, NDT, RVI, and HMS equipment rentals and sales.',
+      website: 'https://www.pine-environmental.com',
+      email: 'sales@engrity.com',
+      phone: 'null'
+    },
+    inStock: true,
+    featured: false,
+    createdAt: '2026-02-12',
+    seo: {
+      title: 'EddyFi Pipescan HD | MFL Pipe Inspection Edmonton',
+      description: 'Rapidly detect pipe corrosion with the EddyFi Pipescan HD. Available for quote through Pine Environmental Edmonton.',
+      keywords: ['EddyFi Pipescan HD', 'MFL pipe inspection', 'corrosion detection', 'pipeline integrity', 'NDT scanners'],
+      ogImage: 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&q=80&w=800',
+      canonicalUrl: '/products/eddyfi-pipescan-hd-127-flat'
+    }
+  },
+  {
+    id: '14',
+    slug: 'thermo-niton-xl3t-980-goldd-plus',
+    name: 'Thermo Niton XL3t 980 Goldd+',
+    description: 'Premier hand-held XRF analyzer for fast elemental analysis and PMI.',
+    longDescription:
+      'The Niton XL3t 980 GOLDD+ provides the ultimate in speed and sensitivity for elemental analysis. Equipped with Geometrically Optimized Large Area Drift Detector (GOLDD) technology, it delivers 10x faster analysis than conventional detectors. It is the gold standard for Positive Material Identification (PMI), scrap metal sorting, and mining exploration.',
+    price: 'Request a Quote',
+    category: 'XRF Analyzers',
+    brand: 'Thermo Scientific',
+    badge: 'ADVANCED XRF',
+    images: [
+      '/images/products/xrf.png'
+    ],
+    videos: [],
+    specifications: {
+      'Detector': 'GOLDD Technology (SDD)',
+      'X-Ray Tube': '50 kV / 2 W',
+      'Elements': 'Mg to U',
+      'Weight': '1.3 kg (3.0 lb)',
+      'Display': 'Tilting Color Touchscreen'
+    },
+    features: [
+      'High-speed analysis of light elements (Mg, Al, Si, P, S)',
+      'Non-destructive testing with lab-quality results',
+      'Ergonomic design for all-day field use',
+      'Integrated GPS for site mapping',
+      'Waterproof and dustproof enclosure'
+    ],
+    applications: [
+      'Positive Material Identification (PMI)',
+      'Scrap Metal Recycling',
+      'Mining and Geochemistry',
+      'Environmental Soil Screening'
+    ],
+    seller: {
+      name: 'Pine Environmental',
+      logo: null,
+      avatar: 'PE',
+      rating: 4.9,
+      totalReviews: 142,
+      location: 'Edmonton, AB',
+      verified: true,
+      establishedYear: 1995,
+      description: 'North America’s leading provider of environmental, NDT, RVI, and HMS equipment rentals and sales.',
+      website: 'https://www.pine-environmental.com',
+      email: 'sales@engrity.com',
+      phone: 'null'
+    },
+    inStock: true,
+    featured: true,
+    createdAt: '2026-02-13',
+    seo: {
+      title: 'Thermo Niton XL3t 980 Goldd+ | Handheld XRF Analyzer',
+      description: 'Fastest PMI results with the Niton XL3t 980 Goldd+ XRF analyzer. Request a quote for elemental analysis in Edmonton.',
+      keywords: ['Niton XL3t 980', 'handheld XRF', 'elemental analysis', 'PMI testing', 'metal analyzer'],
+      ogImage: '/images/products/xrf.png',
+      canonicalUrl: '/products/thermo-niton-xl3t-980-goldd-plus'
+    }
+  },
+  {
+    id: '15',
+    slug: 'olympus-iplex-gx-420-videoscope',
+    name: 'Olympus IPLEX GX 420 Videoscope',
+    description: 'High-definition industrial videoscope with interchangeable scopes.',
+    longDescription:
+      'The IPLEX GX industrial videoscope features interchangeable scopes and light sources for maximum versatility. Its 8-inch high-definition touchscreen provides crisp, bright images in dark industrial environments. PulsarPic image processing reduces noise and sharpens details, ensuring you never miss a defect during critical inspections.',
+    price: 'Request a Quote',
+    category: 'Visual Inspection',
+    brand: 'Olympus',
+    badge: 'RVI SPECIALIST',
+    images: [
+      '/images/products/iplex.jpg'
+    ],
+    videos: [],
+    specifications: {
+      'Scope Diameter': '4.0 mm',
+      'Scope Length': '2.0 m',
+      'LCD': '8-inch Touchscreen',
+      'Illumination': 'High-intensity LED',
+      'Weight': '2.7 kg'
+    },
+    features: [
+      'Interchangeable scope system for various diameters',
+      'Responsive TrueFeel joystick articulation',
+      'Stereo measurement capability',
+      'IP65 rated for harsh environments',
+      'Wireless image and video sharing'
+    ],
+    applications: [
+      'Gas Turbine Internal Inspection',
+      'Heat Exchanger Tube Inspection',
+      'Aviation Maintenance',
+      'Boiler and Piping Internal View'
+    ],
+    seller: {
+      name: 'Pine Environmental',
+      logo: null,
+      avatar: 'PE',
+      rating: 4.9,
+      totalReviews: 142,
+      location: 'Edmonton, AB',
+      verified: true,
+      establishedYear: 1995,
+      description: 'North America’s leading provider of environmental, NDT, RVI, and HMS equipment rentals and sales.',
+      website: 'https://www.pine-environmental.com',
+      email: 'sales@engrity.com',
+      phone: 'null'
+    },
+    inStock: true,
+    featured: true,
+    createdAt: '2026-02-14',
+    seo: {
+      title: 'Olympus IPLEX GX 420 | Industrial Videoscope Edmonton',
+      description: 'Inspect gas turbines and piping with the high-definition IPLEX GX 420 videoscope. Available from Pine Environmental Edmonton.',
+      keywords: ['IPLEX GX 420', 'industrial videoscope', 'RVI equipment', 'Olympus IPLEX', 'borescope inspection'],
+      ogImage: '/images/products/iplex.jpg',
+      canonicalUrl: '/products/olympus-iplex-gx-420-videoscope'
+    }
+  },
+  {
+    id: '16',
+    slug: 'gssi-sir-4000-controller',
+    name: 'GSSI SIR 4000 GPR Controller',
+    description: 'High-performance GPR controller for utility and concrete scanning.',
+    longDescription:
+      'The SIR 4000 is GSSI’s first high-performance GPR controller designed to bridge the gap between legacy analog antennas and next-generation digital offerings. It provides the field professional with the versatility and power to tackle any GPR application, from utility mapping to concrete scanning and bridge deck analysis.',
+    price: 'Request a Quote',
+    category: 'GPR & Survey',
+    brand: 'GSSI',
+    badge: 'GPR EXPERT',
+    images: [
+      '/images/products/gsi.webp'
+    ],
+    videos: [],
+    specifications: {
+      'Display': '10.4 inch LED Touchscreen',
+      'Scan Rate': '800 KHz',
+      'Operating Temp': '-20°C to 40°C',
+      'Storage': '32 GB Internal',
+      'Protection': 'IP65'
+    },
+    features: [
+      'Supports analog and digital antennas',
+      'Advanced data visualization and filtering',
+      'Rugged, sunlight-readable display',
+      'Integrated GPS support',
+      'Hot-swappable dual batteries'
+    ],
+    applications: [
+      'Utility Locating and Mapping',
+      'Concrete Structural Analysis',
+      'Geology and Archaeology',
+      'Road and Bridge Inspection'
+    ],
+    seller: {
+      name: 'Pine Environmental',
+      logo: null,
+      avatar: 'PE',
+      rating: 4.9,
+      totalReviews: 142,
+      location: 'Edmonton, AB',
+      verified: true,
+      establishedYear: 1995,
+      description: 'North America’s leading provider of environmental, NDT, RVI, and HMS equipment rentals and sales.',
+      website: 'https://www.pine-environmental.com',
+      email: 'sales@engrity.com',
+      phone: 'null'
+    },
+    inStock: true,
+    featured: true,
+    createdAt: '2026-02-15',
+    seo: {
+      title: 'GSSI SIR 4000 Controller | Ground Penetrating Radar',
+      description: 'Advanced GPR data collection with the GSSI SIR 4000 controller. In stock at Pine Environmental Edmonton.',
+      keywords: ['GSSI SIR 4000', 'GPR controller', 'utility locating', 'ground penetrating radar', 'concrete scanning'],
+      ogImage: 'https://images.unsplash.com/photo-1534398079244-67c8ad98f3f7?auto=format&fit=crop&q=80&w=800',
+      canonicalUrl: '/products/gssi-sir-4000-controller'
+    }
+  }
 
 
 ]

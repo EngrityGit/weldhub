@@ -7,6 +7,7 @@ import { useCart } from '@/context/CartContext'
 import { getAllProducts } from '@/lib/products'
 import CartSidebar from '@/components/ui/CartSidebar'
 import WishlistSidebar from '@/components/ui/WishlistSidebar'
+import Image from 'next/image'
 
 export default function Header() {
   const router = useRouter()
@@ -55,9 +56,13 @@ export default function Header() {
           <div className="flex items-center justify-between h-16 gap-4">
             {/* Logo */}
             <Link href="/" className="flex items-center space-x-2 group flex-shrink-0">
-              <span className="text-xl md:text-2xl font-bold text-gray-900 tracking-tight">
-                WeldHub
-              </span>
+<Image
+  src="/WeldHub.svg"
+  alt="WeldHub Logo"
+  width={140}
+  height={36}
+  className="h-12 w-auto object-contain"
+/>
             </Link>
 
             {/* Search Bar - Desktop */}
@@ -126,7 +131,7 @@ export default function Header() {
                           }}
                           className="text-sm text-blue-600 hover:text-blue-700 font-semibold"
                         >
-                          View all results for "{searchQuery}"
+                          View all results for &quot;{searchQuery}&quot;
                         </button>
                       </div>
                     </div>

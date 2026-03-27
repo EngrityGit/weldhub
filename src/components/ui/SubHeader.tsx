@@ -50,12 +50,12 @@ export default function SubHeader({
     <div className={`filter-bar transition-all duration-300 ${isScrolled ? 'shadow-md' : ''}`}>
       <div className="container-custom py-4">
         {/* Top Row: Search and Actions */}
-        <div className="flex flex-col lg:flex-row gap-4 items-stretch lg:items-center mb-4">
+        <div className="flex flex-col lg:flex-row gap-4 items-stretch lg:items-center mb-4 pt-6">
           {/* Search Bar */}
           <div className="flex-1 relative">
             <input
               type="text"
-              placeholder="Search products, categories, specifications..."
+              placeholder="Search products"
               value={searchQuery}
               onChange={(e) => onSearchChange(e.target.value)}
               className="search-input w-full"
@@ -154,7 +154,7 @@ export default function SubHeader({
         </div>
 
         {/* Bottom Row: Results Count */}
-        <div className="flex items-center justify-between text-sm">
+        <div className="flex items-center justify-between text-sm pb-2">
           <p className="text-gray-600">
             <span className="font-semibold text-gray-900">{totalResults}</span> products found
           </p>

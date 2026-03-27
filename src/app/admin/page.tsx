@@ -36,11 +36,11 @@ export default function AdminDashboard() {
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
       <header className="bg-white border-b border-gray-200 sticky top-0 z-40">
-        <div className="container-custom py-4">
-          <div className="flex items-center justify-between">
+        <div className="container-custom py-6">
+          <div className="flex items-center justify-between py-2">
             <div>
               <h1 className="text-2xl font-bold text-gray-900">WeldHub Admin</h1>
-              <p className="text-sm text-gray-600">Product Management Portal</p>
+              <p className="text-sm text-gray-600 p-2">Product Management Portal</p>
             </div>
             <div className="flex items-center gap-4">
               <Link href="/" className="btn btn-outline text-sm">
@@ -62,7 +62,7 @@ export default function AdminDashboard() {
 
       <div className="container-custom py-8">
         {/* Stats Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8 py-8">
           <div className="card p-6">
             <div className="flex items-center justify-between mb-2">
               <h3 className="text-sm font-semibold text-gray-600">Total Products</h3>
@@ -158,8 +158,8 @@ export default function AdminDashboard() {
         </div>
 
         {/* Recent Products */}
-        <div className="mt-8">
-          <div className="flex items-center justify-between mb-6">
+        <div className="mt-8 p-8">
+          <div className="flex items-center justify-between mb-6 p-8">
             <h2 className="text-2xl font-bold text-gray-900">Recent Products</h2>
             <Link href="/admin/products" className="text-blue-600 hover:text-blue-700 font-semibold text-sm">
               View All →

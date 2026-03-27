@@ -1,10 +1,10 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Product } from '@/types'
-import { formatPrice, getBadgeClass } from '@/lib/utils'
+import {getBadgeClass } from '@/lib/utils'
 import { useCart } from '@/context/CartContext'
 
 interface ProductCardProps {
@@ -15,27 +15,18 @@ export default function ProductCard({ product }: ProductCardProps) {
   const { addToCart, addToWishlist, removeFromWishlist, isInWishlist } = useCart()
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
   const [isHovered, setIsHovered] = useState(false)
-  const [intervalId, setIntervalId] = useState<NodeJS.Timeout | null>(null)
+  const intervalRef = useRef<NodeJS.Timeout | null>(null)
   const inWishlist = isInWishlist(product.id)
 
-  // Auto-rotate images on hover
+  // ✅ ONLY handle interval here (no direct setState except inside timer)
   useEffect(() => {
-    if (isHovered && product.images.length > 1) {
-      const id = setInterval(() => {
-        setCurrentImageIndex((prev) => (prev + 1) % product.images.length)
-      }, 800)
-      setIntervalId(id)
-    } else {
-      if (intervalId) {
-        clearInterval(intervalId)
-        setIntervalId(null)
-      }
-      setCurrentImageIndex(0)
-    }
+    if (!isHovered || product.images.length <= 1) return
 
-    return () => {
-      if (intervalId) clearInterval(intervalId)
-    }
+    const id = setInterval(() => {
+      setCurrentImageIndex((prev) => (prev + 1) % product.images.length)
+    }, 800)
+
+    return () => clearInterval(id)
   }, [isHovered, product.images.length])
 
   const handleWishlistToggle = (e: React.MouseEvent) => {
@@ -60,11 +51,14 @@ export default function ProductCard({ product }: ProductCardProps) {
         <div 
           className="card card-hover h-full flex flex-col overflow-hidden cursor-pointer group"
           onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
+          onMouseLeave={() => {
+            setIsHovered(false)
+            setCurrentImageIndex(0) // ✅ moved here (fixes your error)
+          }}
         >
           {/* Image Container */}
           <div className="relative w-full h-72 bg-gradient-to-br from-gray-50 to-gray-100 overflow-hidden">
-            {/* Badge */}
+            
             {product.badge && (
               <div className="absolute top-4 left-4 z-10 animate-scale-in">
                 <span className={`badge ${getBadgeClass(product.badge)}`}>
@@ -73,7 +67,6 @@ export default function ProductCard({ product }: ProductCardProps) {
               </div>
             )}
 
-            {/* Wishlist Button */}
             <button 
               onClick={handleWishlistToggle}
               className={`absolute top-4 right-4 z-10 w-10 h-10 rounded-full flex items-center justify-center hover:scale-110 transition-all shadow-md ${
@@ -92,7 +85,7 @@ export default function ProductCard({ product }: ProductCardProps) {
               </svg>
             </button>
 
-            {/* Main Image with Carousel */}
+            {/* Image Carousel */}
             <div className="relative w-full h-full">
               {product.images.map((image, index) => (
                 <Image
@@ -109,7 +102,6 @@ export default function ProductCard({ product }: ProductCardProps) {
               ))}
             </div>
 
-            {/* Image Indicators */}
             {product.images.length > 1 && (
               <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-1.5 px-3 py-2 bg-black/30 backdrop-blur-sm rounded-full">
                 {product.images.map((_, index) => (
@@ -125,7 +117,6 @@ export default function ProductCard({ product }: ProductCardProps) {
               </div>
             )}
 
-            {/* Stock Status */}
             {!product.inStock && (
               <div className="absolute inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center">
                 <span className="bg-red-500 text-white px-6 py-3 rounded-xl font-semibold shadow-lg">
@@ -134,9 +125,9 @@ export default function ProductCard({ product }: ProductCardProps) {
               </div>
             )}
 
-            {/* Quick View Overlay */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           </div>
+
 
           {/* Product Info */}
           <div className="p-6 flex flex-col flex-grow">
@@ -162,54 +153,17 @@ export default function ProductCard({ product }: ProductCardProps) {
             <p className="text-sm text-gray-600 mb-4 line-clamp-2 leading-relaxed">
               {product.description}
             </p>
-
-            {/* Features - Top 2 */}
-            {product.features.length > 0 && (
-              <ul className="mb-4 space-y-1">
-                {product.features.slice(0, 2).map((feature, idx) => (
-                  <li key={idx} className="text-xs text-gray-600 flex items-start gap-2">
-                    <svg className="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span className="line-clamp-1">{feature}</span>
-                  </li>
-                ))}
-              </ul>
-            )}
-
             {/* Spacer */}
             <div className="flex-grow" />
 
-            {/* Seller Info */}
-            <div className="flex items-center gap-3 mb-4 pb-4 border-t border-gray-100 pt-4">
-              <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center flex-shrink-0 shadow-md">
-                <span className="text-white text-sm font-bold">
-                  {product.seller.avatar}
-                </span>
-              </div>
-              <div className="flex-1 min-w-0">
-                <p className="text-sm font-semibold text-gray-900 truncate">
-                  {product.seller.name}
-                </p>
-                <p className="text-xs text-gray-500 flex items-center gap-1">
-                  {product.seller.verified && (
-                    <svg className="w-3 h-3 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                  )}
-                  <span>Verified Seller</span>
-                </p>
-              </div>
-            </div>
 
             {/* Price and Actions */}
             <div className="space-y-3">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-2xl font-bold text-gray-900">
+                  <p className="text-lg font-semibold text-gray-900">
                     {(product.price)}
                   </p>
-                  <p className="text-xs text-gray-500 mt-1">Starting price</p>
                 </div>
               </div>
               

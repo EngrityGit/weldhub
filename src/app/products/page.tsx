@@ -8,7 +8,6 @@ import { SortOption } from '@/types'
 import ProductCard from '@/components/ui/ProductCard'
 import SubHeader from '@/components/ui/SubHeader'
 import FilterSidebar from '@/components/ui/FilterSidebar'
-import { formatPrice, getBadgeClass } from '@/lib/utils'
 
 export default function ProductsPage() {
   const allProducts = getAllProducts()
