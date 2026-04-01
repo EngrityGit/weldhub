@@ -83,8 +83,8 @@ export const products: Product[] = [
     },
     
     inStock: true,
-    featured: true,
-    createdAt: '2024-11-01',
+    featured: false,
+    createdAt: '2025-11-01',
     
     // SEO optimization
     seo: {
@@ -176,7 +176,7 @@ export const products: Product[] = [
     },
     
     inStock: true,
-    featured: true,
+    featured: false,
     createdAt: '2024-10-15',
     
     seo: {
@@ -268,8 +268,8 @@ export const products: Product[] = [
     },
     
     inStock: true,
-    featured: true,
-    createdAt: '2024-10-20',
+    featured: false,
+    createdAt: '2025-10-20',
     
     seo: {
       title: 'XVC-700 Series Compact Weld Cameras - Slimline Design | Xiris',
@@ -360,7 +360,7 @@ export const products: Product[] = [
     },
     
     inStock: true,
-    featured: true,
+    featured: false,
     createdAt: '2024-11-15',
     
     seo: {
@@ -459,8 +459,8 @@ export const products: Product[] = [
     },
     
     inStock: true,
-    featured: true,
-    createdAt: '2024-09-01',
+    featured: false,
+    createdAt: '2025-09-01',
     
     seo: {
       title: 'WI-2200 Weld Inspection System - 0.015mm Detection | Xiris',
@@ -712,7 +712,7 @@ export const products: Product[] = [
   },
 
   inStock: true,
-  featured: true,
+  featured: false,
   createdAt: '2025-12-01',
 
   seo: {
