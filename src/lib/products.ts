@@ -1206,7 +1206,7 @@ export const products: Product[] = [
     brand: 'GSSI',
     badge: 'GPR EXPERT',
     images: [
-      '/images/products/gsi.webp'
+      '/images/products/gssi.jpg'
     ],
     videos: [],
     specifications: {
