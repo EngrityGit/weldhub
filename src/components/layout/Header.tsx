@@ -55,14 +55,10 @@ export default function Header() {
         <nav className="container-custom">
           <div className="flex items-center justify-between h-16 gap-4">
             {/* Logo */}
-            <Link href="/" className="flex items-center space-x-2 group flex-shrink-0">
-<Image
-  src="/WeldHub.svg"
-  alt="WeldHub Logo"
-  width={140}
-  height={36}
-  className="h-12 w-auto object-contain"
-/>
+           <Link href="/" className="flex items-center space-x-2 group flex-shrink-0">
+              <span className="font-be font-extrabold text-3xl tracking-tighter text-[#0071fe]">
+                WeldHub
+              </span>
             </Link>
 
             {/* Search Bar - Desktop */}
