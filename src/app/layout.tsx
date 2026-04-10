@@ -4,6 +4,8 @@ import './globals.css'
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
 import { CartProvider } from '@/context/CartContext'
+import { OrganizationSchema, WebsiteSchema } from '@/components/seo/StructuredData'
+
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -97,6 +99,8 @@ export default function RootLayout({
         <meta name="theme-color" content="#0071fe" />
       </head>
       <body className={`${inter.className} antialiased`}>
+        <OrganizationSchema />
+<WebsiteSchema />
         <CartProvider>
           {/* Skip to main content for accessibility */}
           <a 
