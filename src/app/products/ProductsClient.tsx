@@ -3,18 +3,13 @@
 import { useState, useMemo } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { getAllProducts, getFilterOptions, filterAndSortProducts } from '@/lib/products'
+import { getFilterOptions, filterAndSortProducts } from '@/lib/products'
 import { SortOption } from '@/types'
 import ProductCard from '@/components/ui/ProductCard'
 import SubHeader from '@/components/ui/SubHeader'
 import FilterSidebar from '@/components/ui/FilterSidebar'
-import type { Metadata } from 'next'
-import { productsMetadata } from '@/components/seo/SEOComponent'
- 
-export const metadata: Metadata = productsMetadata
 
 export default function ProductsPage() {
-  const allProducts = getAllProducts()
   const filterOptions = getFilterOptions()
 
   // State
@@ -52,8 +47,8 @@ export default function ProductsPage() {
         onToggleFilters={() => setShowFilters(!showFilters)}
       />
 
-      {/* Main Content */}
-      <div className="container-custom py-12">
+      {/* Main Content - Changed container-custom to w-full with padding */}
+      <div className="w-full px-6 lg:px-12 py-12">
         <div className="flex gap-8">
           {/* Sidebar Filters */}
           {showFilters && (
@@ -93,7 +88,7 @@ export default function ProductsPage() {
                 </button>
               </div>
             ) : viewMode === 'grid' ? (
-              // Grid View
+              // Grid View - Set to max 3 columns on large screens to keep items large
               <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8">
                 {filteredProducts.map((product, idx) => (
                   <div key={product.id} className="animate-fade-in" style={{ animationDelay: `${idx * 0.05}s` }}>
@@ -121,20 +116,13 @@ export default function ProductsPage() {
                         <tr key={product.id}>
                           {/* Image */}
                           <td>
-                            <div className="relative w-20 h-20 rounded-lg overflow-hidden bg-gray-100">
+                            <div className="relative w-20 h-20 rounded-lg overflow-hidden bg-gray-100 border border-gray-100">
                               <Image
                                 src={product.images[0]}
                                 alt={product.name}
                                 fill
                                 className="object-cover"
                               />
-                              {/* {product.badge && (
-                                <div className="absolute top-1 left-1">
-                                  <span className={`badge text-xs ${getBadgeClass(product.badge)}`}>
-                                    {product.badge}
-                                  </span>
-                                </div>
-                              )} */}
                             </div>
                           </td>
 
@@ -143,16 +131,6 @@ export default function ProductsPage() {
                             <Link href={`/products/${product.slug}`} className="hover:text-blue-600">
                               <h3 className="font-bold text-gray-900 mb-1">{product.name}</h3>
                               <p className="text-sm text-gray-600 line-clamp-2 mb-2">{product.description}</p>
-                              <div className="flex items-center gap-2 text-xs">
-                                <div className="flex items-center gap-1">
-                                  <svg className="w-3 h-3 text-yellow-400 fill-current" viewBox="0 0 20 20">
-                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                  </svg>
-                                  <span className="font-semibold text-gray-700">{product.seller.rating}</span>
-                                </div>
-                                <span className="text-gray-400">•</span>
-                                <span className="text-gray-600">{product.seller.name}</span>
-                              </div>
                             </Link>
                           </td>
 
@@ -178,7 +156,6 @@ export default function ProductsPage() {
                           {/* Price */}
                           <td className="text-right">
                             <div className="font-bold text-sm text-gray-900">{(product.price)}</div>
-                            {/* <div className="text-xs text-gray-500">Request quote</div> */}
                           </td>
 
                           {/* Action */}

@@ -247,29 +247,6 @@ export default function ProductDetailClient({ product }: ProductDetailClientProp
                   Request Custom Quote <ArrowRight size={20} />
                 </button>
               </div>
-
-              {/* Seller Info (Restored Styling) */}
-              <div className="reveal bg-white border border-gray-100 p-6 rounded-3xl flex items-start gap-5 shadow-sm">
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-700 rounded-2xl flex items-center justify-center text-white text-xl font-bold flex-shrink-0 shadow-lg">
-                  {product.seller.avatar}
-                </div>
-                <div className="flex-1">
-                  <div className="flex items-center gap-2 mb-1">
-                    <h4 className="font-bold text-gray-900 uppercase tracking-tight">{product.seller.name}</h4>
-                    {product.seller.verified && <CheckCircle2 size={16} className="text-blue-500" />}
-                  </div>
-                  <div className="flex items-center gap-3 text-sm text-gray-500 mb-3">
-                    <span className="flex items-center gap-1 font-bold text-gray-900">
-                      <Star size={14} className="fill-yellow-400 text-yellow-400" /> {product.seller.rating}
-                    </span>
-                    <span className="flex items-center gap-1">
-                      <MapPin size={14} /> {product.seller.location}
-                    </span>
-                  </div>
-                  <p className="text-xs text-gray-500 leading-relaxed line-clamp-2 italic">&quot;{product.seller.description}&quot;</p>
-                </div>
-              </div>
-
               {/* Quick Features List */}
               <div className="reveal space-y-3">
                 <h3 className="text-sm font-bold text-gray-400 uppercase tracking-[0.2em] mb-4">Key Benefits</h3>

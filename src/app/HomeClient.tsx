@@ -113,7 +113,7 @@ export default function HomePage() {
             <span className="inline-block align-middle mx-3 w-28 md:w-40 h-14 md:h-20 bg-slate-100 rounded-full overflow-hidden border border-slate-200 translate-y-[-4px]">
               <Image src="/images/products/eddy.png" alt="crafting" width={160} height={80} className="object-cover w-full h-full" />
             </span>
-            crafting of premium used assets for 
+            crafting with premium assets for 
             <span className="text-blue-500"> extraordinary </span> 
             results
             <span className="inline-block align-middle mx-3 w-28 md:w-40 h-14 md:h-20 bg-slate-100 rounded-full overflow-hidden border border-slate-200 translate-y-[-4px]">
