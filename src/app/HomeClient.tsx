@@ -58,7 +58,7 @@ export default function HomePage() {
               </div>
               <div className="border-l border-slate-300 pl-8">
                 <p className="text-[10px] uppercase font-bold text-slate-400 mb-1 tracking-widest">Condition</p>
-                <p className="text-sm font-bold text-slate-800">Certified Used</p>
+                <p className="text-sm font-bold text-slate-800">Certified Pre-Owned</p>
               </div>
               <div className="border-l border-slate-300 pl-8">
                 <p className="text-[10px] uppercase font-bold text-slate-400 mb-1 tracking-widest">Marketplace</p>
@@ -121,7 +121,7 @@ export default function HomePage() {
             </span>
           </h2>
 
-          <Link href="/products" className="inline-flex items-center gap-3 px-12 py-5 bg-[#0071fe] text-white rounded-full font-bold hover:bg-slate-800 transition-all shadow-xl group">
+          <Link href="/products" className="inline-flex items-center gap-3 px-12 py-5 bg-[#0071fe] text-white rounded-md font-bold hover:bg-black transition-all shadow-xl group">
             Browse Engrity WeldHub
             <span className="group-hover:translate-x-1 transition-transform">→</span>
           </Link>
