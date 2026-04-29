@@ -2,7 +2,7 @@
 
 import { useEffect, useState, useRef } from 'react'
 
-const PDF_PATH = '/pdf/productlist2026.pdf'
+const PDF_PATH = '/pdf/productlist2026_V1.0.pdf'
 const PDF_FILENAME = 'WeldHub-Product-List-2026.pdf'
 
 // ── Types & Interfaces ──────────────────────────────────────────────────
