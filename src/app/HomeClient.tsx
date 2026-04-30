@@ -101,7 +101,7 @@ export default function HomePage() {
       <section className="py-40 px-6 bg-white overflow-hidden">
         <div className="max-w-screen-xl mx-auto text-center">
           <div className="inline-block px-6 py-2 border border-slate-200 rounded-full mb-12 text-sm font-medium text-slate-500 bg-white shadow-sm">
-            Engrity Products
+            WeldHub Products
           </div>
 
           <h2 className="text-3xl md:text-5xl font-normal leading-[1.1] tracking-tight text-black max-w-6xl mx-auto mb-16">

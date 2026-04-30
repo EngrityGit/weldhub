@@ -158,7 +158,7 @@ export default function ProductDetailClient({ product }: ProductDetailClientProp
                   <ShieldCheck size={32} />
                 </div>
                 <div className="text-center md:text-left">
-                  <h4 className="text-lg font-bold text-gray-900 mb-1">Verified by Engrity</h4>
+                  <h4 className="text-lg font-bold text-gray-900 mb-1">Verified by Engrity Inspection</h4>
                   <p className="text-gray-600 text-sm leading-relaxed">
                     This product has been inspected and certified by our engineering team for high-performance industrial standards. Guaranteed genuine parts and manufacturer warranty.
                   </p>

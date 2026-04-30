@@ -6,9 +6,9 @@ import Link from 'next/link'
 export const metadata: Metadata = termsMetadata
 
 const LAST_UPDATED = 'April 10, 2026'
-const COMPANY = 'Engrity Inc.'
+const COMPANY = 'Engrity Group Inc.'
 const SITE = 'WeldHub'
-const EMAIL = 'legal@engrity.com'
+const EMAIL = 'sales@engrity.com'
 const BASE_URL = 'https://weldhub.ca'
 
 export default function TermsPage() {

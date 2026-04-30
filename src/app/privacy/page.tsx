@@ -6,9 +6,9 @@ import Link from 'next/link'
 export const metadata: Metadata = privacyMetadata
 
 const LAST_UPDATED = 'April 10, 2026'
-const COMPANY = 'Engrity Inc.'
+const COMPANY = 'Engrity Group Inc.'
 const SITE = 'WeldHub'
-const EMAIL = 'privacy@engrity.com'
+const EMAIL = 'sales@engrity.com'
 
 export default function PrivacyPage() {
   return (
