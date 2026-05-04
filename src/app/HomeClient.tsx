@@ -31,7 +31,7 @@ export default function HomePage() {
             <div className="space-y-2">
               <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#0071fe]">Explore Inventory</p>
               <h1 className="text-7xl md:text-9xl font-bold tracking-tighter text-slate-900 leading-[0.85]">
-                {featuredProducts[activeHeroIdx]?.brand}-<br />
+                New-<br />
                 <span className=" text-[#0071fe]">Series</span>
               </h1>
             </div>
@@ -43,7 +43,7 @@ export default function HomePage() {
 
             <div className="flex items-center gap-4">
               <Link href={`/products/${featuredProducts[activeHeroIdx]?.slug}`} className="px-10 py-4 bg-[#1a1a1a] text-white font-bold rounded-sm hover:bg-slate-800 transition-all uppercase text-sm tracking-widest">
-                Buy {featuredProducts[activeHeroIdx]?.brand}
+                Buy Now!
               </Link>
               <Link href="/request-quote" className="px-10 py-4 border border-slate-400 text-slate-900 font-bold rounded-sm hover:bg-white/50 transition-all uppercase text-sm tracking-widest">
                 Request Quote

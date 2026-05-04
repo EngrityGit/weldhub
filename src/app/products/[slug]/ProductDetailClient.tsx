@@ -128,7 +128,7 @@ export default function ProductDetailClient({ product }: ProductDetailClientProp
                       src={product.images[currentImageIndex]}
                       alt={product.name}
                       fill
-                      className="object-cover"
+                      className="object-contain"
                       priority
                     />
                   </div>

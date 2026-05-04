@@ -896,7 +896,7 @@ export const products: Product[] = [
 {
     id: '11',
     slug: 'olympus-focus-px-32128pr',
-    name: 'Olympus Focus PX 32128PR',
+    name: 'Olympus Focus PX 32:128PR',
     description: 'High-performance phased array and UT data acquisition unit for automated inspection.',
     longDescription:
       'The Focus PX is a powerful, dedicated acquisition unit designed for automated ultrasonic testing (AUT). It features 32:128PR phased array capabilities and is built for seamless integration into high-volume manufacturing environments. Ideal for aerospace, automotive, and pipeline applications where high data throughput and signal quality are mandatory.',
@@ -905,7 +905,10 @@ export const products: Product[] = [
     brand: 'Olympus',
     badge: 'AUTOMATED UT',
     images: [
-      '/images/products/focus.png'
+      '/images/products/focus.png',
+      '/images/products/focusstack.jpg',
+      '/images/products/focusintegration.jpg',
+
     ],
     videos: [],
     specifications: {
@@ -947,7 +950,7 @@ export const products: Product[] = [
     featured: true,
     createdAt: '2026-02-10',
     seo: {
-      title: 'Olympus Focus PX 32128PR | Pine Environmental Edmonton',
+      title: 'Olympus Focus PX 32128PR | WeldHub Edmonton',
       description: 'Buy or rent the Olympus Focus PX 32128PR phased array unit in Edmonton. High-speed automated UT acquisition for industrial manufacturing.',
       keywords: ['Olympus Focus PX', 'phased array UT', 'automated ultrasonic testing', 'NDT Edmonton', 'industrial inspection'],
       ogImage: '/images/products/focus.png',
