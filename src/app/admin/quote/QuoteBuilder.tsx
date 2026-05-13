@@ -1,10 +1,10 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { 
-  FileText, Plus, Trash2, Download, User, Settings, 
-  DollarSign, MapPin, Mail, Phone, Eye, Edit3, 
-  ChevronRight, Printer, Package, CreditCard, Globe
+  FileText, Plus, Trash2, User, Settings, 
+  DollarSign, Eye, Edit3, 
+  Printer, Package, CreditCard, LucideIcon
 } from 'lucide-react';
 
 // --- Types ---
@@ -21,9 +21,11 @@ interface ExtraCharge {
   amount: number;
 }
 
+type TabType = 'details' | 'items' | 'charges' | 'rep';
+
 const QuoteBuilder: React.FC = () => {
   // --- UI State ---
-  const [activeTab, setActiveTab] = useState<'details' | 'items' | 'charges' | 'rep'>('details');
+  const [activeTab, setActiveTab] = useState<TabType>('details');
   const [viewMode, setViewMode] = useState<'edit' | 'preview'>('edit'); // For mobile toggle
 
   // --- Quote State ---
@@ -31,8 +33,8 @@ const QuoteBuilder: React.FC = () => {
   const [subject, setSubject] = useState('Olympus IPLEX GT/GX Videoscope – 6MM OM Scope');
   const [issueDate, setIssueDate] = useState('2026-05-12');
   const [expiryDate, setExpiryDate] = useState('2026-06-11');
-  const [payTerms, setPayTerms] = useState('Pending Credit Check');
-  const [currency, setCurrency] = useState('CAD');
+  const [payTerms] = useState('Pending Credit Check');
+  const [currency] = useState('CAD');
   const [refCode, setRefCode] = useState('051326CM');
 
   const [clientName, setClientName] = useState('Mr. Syukur Hidayat');
@@ -81,15 +83,21 @@ const QuoteBuilder: React.FC = () => {
 
   // --- PDF Logic ---
   const downloadPDF = async () => {
-    const html2pdf = (await import('html2pdf.js')).default;
+    // Dynamic import to avoid SSR issues
+    const html2pdfModule = await import('html2pdf.js' as string);
+    const html2pdf = html2pdfModule.default;
     const element = document.getElementById('quote-document');
+    
+    if (!element) return;
+
     const opt = {
       margin: 0,
       filename: `Engrity-Quote-${quoteNum}.pdf`,
       image: { type: 'jpeg', quality: 1 },
       html2canvas: { scale: 3, useCORS: true, letterRendering: true },
       jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
-    };
+    } as const; // "as const" fixes the literal type error for 'jpeg'
+
     html2pdf().set(opt).from(element).save();
   };
 
@@ -101,7 +109,6 @@ const QuoteBuilder: React.FC = () => {
         <div className="flex items-center gap-3">
           <div>
             <h1 className="font-bold text-lg tracking-tight leading-none text-slate-800">Engrity WeldHub</h1>
-
           </div>
         </div>
 
@@ -138,14 +145,14 @@ const QuoteBuilder: React.FC = () => {
         <aside className={`${viewMode === 'preview' ? 'hidden' : 'flex'} lg:flex w-full lg:w-[480px] flex-col border-r bg-slate-50/50 overflow-hidden`}>
           <div className="flex p-2 gap-1 bg-white border-b overflow-x-auto no-scrollbar">
             {[
-              { id: 'details', label: 'Client', icon: User },
-              { id: 'items', label: 'Items', icon: Package },
-              { id: 'charges', label: 'Charges', icon: DollarSign },
-              { id: 'rep', label: 'Rep', icon: Settings },
+              { id: 'details' as const, label: 'Client', icon: User },
+              { id: 'items' as const, label: 'Items', icon: Package },
+              { id: 'charges' as const, label: 'Charges', icon: DollarSign },
+              { id: 'rep' as const, label: 'Rep', icon: Settings },
             ].map((tab) => (
               <button
                 key={tab.id}
-                onClick={() => setActiveTab(tab.id as any)}
+                onClick={() => setActiveTab(tab.id)}
                 className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-bold whitespace-nowrap transition-all ${
                   activeTab === tab.id ? 'bg-blue-600 text-white shadow-lg shadow-blue-200' : 'text-slate-500 hover:bg-slate-100'
                 }`}
@@ -232,8 +239,8 @@ const QuoteBuilder: React.FC = () => {
               <div className="space-y-6 animate-in fade-in slide-in-from-left-4">
                 <SectionHeader icon={DollarSign} title="Taxes & Logic" />
                 <div className="grid grid-cols-2 gap-4">
-                  <InputField label="GST %" type="number" value={gstRate.toString()} onChange={v => setGstRate(parseFloat(v))} />
-                  <InputField label="PST %" type="number" value={pstRate.toString()} onChange={v => setPstRate(parseFloat(v))} />
+                  <InputField label="GST %" type="number" value={gstRate.toString()} onChange={v => setGstRate(parseFloat(v) || 0)} />
+                  <InputField label="PST %" type="number" value={pstRate.toString()} onChange={v => setPstRate(parseFloat(v) || 0)} />
                 </div>
                 
                 <SectionHeader icon={CreditCard} title="Additional Charges" />
@@ -373,7 +380,7 @@ const QuoteBuilder: React.FC = () => {
                   </div>
                   <div className="bg-blue-50 border-l-4 border-blue-600 p-4 rounded-r-xl">
                     <p className="text-[10px] text-blue-800 font-bold leading-relaxed italic">
-                      "This Quote remains valid for 30 days from the date of creation and is subject to the availability of technicians."
+                      &quot;This Quote remains valid for 30 days from the date of creation and is subject to the availability of technicians.&quot;
                     </p>
                   </div>
                 </div>
@@ -432,7 +439,7 @@ const QuoteBuilder: React.FC = () => {
 };
 
 // --- Helper Components ---
-const SectionHeader = ({ icon: Icon, title }: { icon: any, title: string }) => (
+const SectionHeader = ({ icon: Icon, title }: { icon: LucideIcon, title: string }) => (
   <div className="flex items-center gap-2 mb-4">
     <div className="bg-white shadow-sm border p-1.5 rounded-lg text-blue-600">
       <Icon size={16} />
