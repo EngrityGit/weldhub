@@ -35,30 +35,49 @@ export default function AdminDashboard() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
-      <header className="bg-white border-b border-gray-200 sticky top-0 z-40">
-        <div className="container-custom py-6">
-          <div className="flex items-center justify-between py-2">
-            <div>
-              <h1 className="text-2xl font-bold text-gray-900">WeldHub Admin</h1>
-              <p className="text-sm text-gray-600 p-2">Product Management Portal</p>
-            </div>
-            <div className="flex items-center gap-4">
-              <Link href="/" className="btn btn-outline text-sm">
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-                </svg>
-                View Site
-              </Link>
-              <button onClick={handleLogout} className="btn btn-secondary text-sm">
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
-                </svg>
-                Logout
-              </button>
-            </div>
-          </div>
-        </div>
-      </header>
+<header className="bg-white border-b border-gray-200 sticky top-0 z-40">
+  <div className="container-custom py-6">
+    <div className="flex items-center justify-between py-2">
+      <div>
+        <h1 className="text-2xl font-bold text-gray-900">WeldHub Admin</h1>
+        <p className="text-sm text-gray-600 p-2">Product Management Portal</p>
+      </div>
+
+      <div className="flex items-center gap-4">
+        <Link
+          href="admin/quote"
+          className="px-3 py-2 text-sm font-medium text-gray-700 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors"
+        >
+          Generate Quote
+        </Link>
+
+        <Link href="/" className="btn btn-outline text-sm">
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+            />
+          </svg>
+          View Site
+        </Link>
+
+        <button onClick={handleLogout} className="btn btn-secondary text-sm">
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"
+            />
+          </svg>
+          Logout
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
 
       <div className="container-custom py-8">
         {/* Stats Grid */}
