@@ -1561,7 +1561,7 @@ export const products: Product[] = [
     brand: 'Jireh',
     badge: 'USED',
     images: [
-      '/images/products/Navic_scanner.jpg'
+      '/images/products/navic_scanner.jpg'
     ],
     videos: [],
     specifications: {
@@ -1605,7 +1605,7 @@ export const products: Product[] = [
       title: 'Used Jireh NAVIC Scanner | Automated Pipe Weld Inspection',
       description: 'Used Jireh NAVIC automated pipe weld scanner with magnetic drive and encoder positioning. $54,000 CAD. Compatible with major PA UT systems.',
       keywords: ['Jireh NAVIC', 'pipe weld scanner', 'automated UT scanner', 'phased array scanner', 'used NDT scanner'],
-      ogImage: '/images/products/focus.png',
+      ogImage: '/images/products/navic_scanner.jpg',
       canonicalUrl: '/products/jireh-navic-scanner-used'
     }
   },
