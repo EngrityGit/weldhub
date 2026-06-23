@@ -5,6 +5,14 @@ export interface Product {
   description: string
   longDescription: string
   price: string
+  originalPrice: string | null
+  condition: string
+  onSale: boolean
+  discountPercent: number
+  bulkPricing: {
+    minQty: number
+    pricePerUnit: string
+  } | null
   category: string
   brand: string
   badge?: string
@@ -51,10 +59,10 @@ export interface Product {
   }
 }
 
-
 export interface FilterOptions {
   categories: string[]
   brands: string[]
+  conditions: string[]
   priceRange: {
     min: number
     max: number
