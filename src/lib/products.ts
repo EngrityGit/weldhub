@@ -2133,6 +2133,101 @@ export const products: Product[] = [
       ogImage: '/images/products/epoch.jpg',
       canonicalUrl: '/products/olympus-epoch-650-flaw-detector-new'
     }
+  },
+  {
+    id: '29',
+    slug: 'trm-heavyweld-water-cooled-laser-welder',
+    name: 'TRM HeavyWELD Water-Cooled Laser Welding System',
+    description: 'High-performance water-cooled laser welding system available in 1500W to 3000W configurations for manual and automated use.',
+    longDescription:
+      'The TRM HeavyWELD series is engineered to replace traditional air-cooled laser welders with a superior water-cooled architecture. Designed for long-duration continuous welding, it offers consistent power output, a quiet work environment, and a modular design for easy on-site repairs. The system features a 10" high-resolution touch screen with an integrated expert database, allowing both beginners and professionals to achieve perfect results. With full compliance to EU safety regulations (SGS CE and TUV qualified), the HeavyWELD is the industry standard for safe, high-performance laser welding in both handheld and cobot-integrated applications.',
+
+    price: 'Request a Quote',
+    originalPrice: null,
+    condition: 'New',
+    onSale: false,
+    discountPercent: 0,
+    bulkPricing: null,
+    category: 'Laser Welders',
+    brand: 'TRM',
+    badge: 'Welding',
+
+    images: [
+      '/images/products/Weldhub laser welding10.png',
+      '/images/products/Weldhub laser welding11.png',
+      '/images/products/Weldhub laser welding12.png',
+    ],
+
+    videos: [],
+
+    specifications: {
+      'Power Output': '1500W - 3000W',
+      'Cooling System': 'Advanced Water-Cooled',
+      'Control Interface': '10" LCD High-Resolution Touch Screen',
+      'Wire Feeding Accuracy': 'Servo step motor (error <0.1%)',
+      'Safety Certification': 'SGS CE / TUV / PL e Electrical Safety',
+      'Standard Compliance': 'EN ISO 17637, 3452-1, 17636-1, 17639, 13919-1',
+      'Torch Weight': '200g lighter than previous models',
+      'Wire Feeder': 'CANBUS (Supports up to 4 feeders)',
+      'Operational Modes': 'Easy Mode & Expert Mode',
+      'Automation Support': 'Seamless Manual/Cobot switching'
+    },
+
+    features: [
+      'Heavy-duty water cooling for 24/7 continuous operation',
+      'Power Optimization Pattern to prevent undercut',
+      'No-blockage smooth wire feeding with integrated straightener',
+      'Ergonomic lightweight torch with laser status indicator',
+      'Remote display with integrated E-STOP for improved safety',
+      'Integrated expert database for carbon steel, stainless, aluminum, and galvanized sheet',
+      'DIY firmware and database upgrades via USB',
+      'Interlock-able safety solutions (cabin, helmet, and goggles)'
+    ],
+
+    applications: [
+      'Industrial Handheld Laser Welding',
+      'Robotic/Cobot Welding Automation',
+      'Thick Plate Welding (up to 4mm Carbon Steel)',
+      'Stainless Steel Fabrication (up to 3mm)',
+      'Automotive and Aerospace Manufacturing',
+      'Precision Sheet Metal Fabrication'
+    ],
+
+    seller: {
+      name: 'TRM Technology Inc.',
+      logo: null,
+      avatar: 'TRM',
+      rating: 4.9,
+      totalReviews: 124,
+      location: 'Global Distribution',
+      verified: true,
+      establishedYear: 2005,
+      description:
+        'TRM is a laser specialist focused on safe, high-performance laser welding solutions and industrial automation.',
+      website: '',
+      email: 'sales@engrity.com',
+      phone: 'null'
+    },
+
+    inStock: true,
+    featured: true,
+    createdAt: '2026-06-24',
+
+    seo: {
+      title: 'TRM HeavyWELD 1500W-3000W Water-Cooled Laser Welder | WeldHub',
+      description:
+        'Industrial-grade water-cooled laser welding system by TRM. Features 10-inch HMI, expert database, and full EU safety compliance.',
+      keywords: [
+        'TRM laser welding',
+        'water-cooled laser welder',
+        'handheld laser welding',
+        '3000W laser welder',
+        'cobot laser welding',
+        'TRM HeavyWELD'
+      ],
+      ogImage: '/images/products/Weldhub laser welding10.png',
+      canonicalUrl: '/products/trm-heavyweld-water-cooled-laser-welder'
+    }
   }
 ]
 
