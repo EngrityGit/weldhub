@@ -12,7 +12,7 @@ export interface Product {
   bulkPricing: {
     minQty: number
     pricePerUnit: string
-  } | null
+  }| null 
   category: string
   brand: string
   badge?: string

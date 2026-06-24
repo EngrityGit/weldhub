@@ -19,6 +19,26 @@ export default function HomePage() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
+  const faqs = [
+    {
+      q: "What makes WeldHub assets verified?",
+      a: "Every listing goes through a technical review by our engineering team. We match physical condition against original documentation — calibration records, service history, and compliance certifications — before anything reaches the marketplace."
+    },
+    {
+      q: "How does the quote process work?",
+      a: "Select any asset and submit a quote request. You'll receive a detailed valuation within 24 hours, including condition notes and logistics options. No obligation, no sales calls — just clear pricing."
+    },
+    {
+      q: "Do you carry new and used inventory?",
+      a: "Yes. WeldHub lists both new-in-box and certified pre-owned assets. Each listing is clearly labelled with condition grade, and used assets include a full inspection report."
+    },
+    {
+      q: "Can I list equipment for sale through WeldHub?",
+      a: "Engrity WeldHub works with select industrial partners to list surplus or decommissioned assets. Reach out through our contact page and a member of the team will follow up within one business day."
+    },
+  ]
+ 
+
   return (
     <div className="w-full bg-background overflow-x-hidden">
       
@@ -145,56 +165,131 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* --- FAQ SECTION --- */}
-      <section className="py-32 px-6 md:px-12 bg-white border-y border-slate-100">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-5xl font-semibold tracking-tight mb-20 text-center  text-[#0071fe]">Questions Answered</h2>
-          <div className="space-y-4">
-            {[
-              {
-                q: "What makes Engrity WeldHub verified?",
-                a: "Every industrial asset, from robotic arms to NDT cameras, is vetted by our engineering team to ensure technical documentation matches the current physical state of the device."
-              },
-              {
-                q: "How does the quote process work?",
-                a: "Choose your series, request a quote, and receive a comprehensive valuation within 24 hours. Engrity WeldHub simplifies high-stakes industrial procurement."
-              }
-            ].map((item, i) => (
-              <div key={i} className="group border border-slate-200 rounded-[2rem] overflow-hidden transition-all duration-500 hover:border-blue-500/50">
-                <button onClick={() => setOpenIndex(openIndex === i ? null : i)} className="w-full flex items-center justify-between p-8 text-left">
-                  <span className={`text-xl font-bold transition-colors ${openIndex === i ? 'text-blue-600' : 'text-slate-900'}`}>{item.q}</span>
-                  <div className={`w-10 h-10 rounded-full flex items-center justify-center transition-all duration-500 ${openIndex === i ? 'bg-blue-600 text-white rotate-180' : 'bg-slate-100 text-slate-400'}`}>
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
-                  </div>
+   {/* ─── FAQ (fully redesigned: split-column, clean) ─── */}
+      <section className="py-32 px-6 md:px-16 bg-white border-t border-slate-100">
+        <div className="max-w-screen-xl mx-auto grid lg:grid-cols-[1fr_2fr] gap-24 items-start">
+ 
+          {/* Left: label + heading */}
+          <div className="lg:sticky lg:top-32">
+            <p className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#0071fe] mb-4">Support</p>
+            <h2 className="text-4xl font-semibold tracking-tight text-slate-900 leading-tight mb-6">
+              Questions<br />answered.
+            </h2>
+            <p className="text-base text-slate-500 leading-relaxed mb-10 max-w-xs">
+              Everything you need to know about buying, listing, and sourcing industrial assets through WeldHub.
+            </p>
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-slate-900 border-b border-slate-300 pb-0.5 hover:border-[#0071fe] hover:text-[#0071fe] transition-colors"
+            >
+              Contact support
+              <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </Link>
+          </div>
+ 
+          {/* Right: accordion list */}
+          <div className="divide-y divide-slate-100">
+            {faqs.map((item, i) => (
+              <div key={i} className="py-7">
+                <button
+                  onClick={() => setOpenIndex(openIndex === i ? null : i)}
+                  className="w-full flex items-center justify-between gap-6 text-left group"
+                >
+                  <span className={`text-base font-semibold leading-snug transition-colors ${openIndex === i ? 'text-[#0071fe]' : 'text-slate-900 group-hover:text-slate-600'}`}>
+                    {item.q}
+                  </span>
+                  <span className={`flex-shrink-0 w-7 h-7 flex items-center justify-center transition-all duration-300 ${openIndex === i ? 'rotate-45' : ''}`}>
+                    <svg className="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
+                    </svg>
+                  </span>
                 </button>
-                <div className={`grid transition-all duration-500 ease-in-out ${openIndex === i ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}>
-                  <div className="overflow-hidden"><p className="p-8 pt-0 text-lg text-slate-500 leading-relaxed">{item.a}</p></div>
+                <div className={`grid transition-all duration-300 ease-in-out ${openIndex === i ? 'grid-rows-[1fr] opacity-100 mt-4' : 'grid-rows-[0fr] opacity-0'}`}>
+                  <div className="overflow-hidden">
+                    <p className="text-sm text-slate-500 leading-relaxed max-w-xl">
+                      {item.a}
+                    </p>
+                  </div>
                 </div>
               </div>
             ))}
           </div>
+ 
         </div>
       </section>
 
-      {/* --- WIDE BRAND BLUE CTA --- */}
-      <section className="py-24 px-6">
-        <div className="max-w-screen-2xl mx-auto bg-[#0071fe] rounded-[4rem] p-12 md:p-24 relative overflow-hidden group min-h-[500px] flex items-center">
-          <div className="grid lg:grid-cols-2 gap-12 w-full items-center relative z-10">
-            <div className="space-y-10 text-white">
-              <h2 className="text-5xl md:text-8xl font-bold tracking-tighter leading-[0.9]">
-                Upgrade your <br /> workforce.
+   {/* ─── CTA (redesigned: clean split, no heavy rounding) ─── */}
+      <section className="py-24 px-6 md:px-16 bg-[#fcfcfc] border-t border-slate-100">
+        <div className="max-w-screen-xl mx-auto">
+ 
+          {/* Top rule + label */}
+          <div className="flex items-center justify-between mb-16 pb-5 border-b border-slate-200">
+            <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-slate-400">Get started</span>
+            <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-slate-400">WeldHub — Engrity Group</span>
+          </div>
+ 
+          <div className="grid lg:grid-cols-2 gap-16 items-end">
+ 
+            {/* Left: copy */}
+            <div>
+              <h2 className="text-6xl md:text-8xl font-bold tracking-tighter text-slate-900 leading-[0.88] mb-10">
+                Upgrade<br />
+                your<br />
+                <span className="text-[#0071fe]">workforce.</span>
               </h2>
-              <p className="text-xl md:text-2xl text-blue-100 max-w-xl font-light">
-                Secure precision assets through the Engrity WeldHub network. High-end NDT and welding technology, verified and ready.
+              <p className="text-lg text-slate-500 leading-relaxed max-w-sm mb-12">
+                Source verified NDT and welding assets through WeldHub — precision equipment, ready to deploy.
               </p>
-              <Link href="/products" className="group relative px-14 py-7 bg-white text-[#0071fe] rounded-full font-bold text-xl transition-all hover:scale-105 shadow-2xl flex items-center gap-3 w-fit">
-                Start Exploring
-                <svg className="w-6 h-6 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-              </Link>
+              <div className="flex flex-col sm:flex-row items-start gap-4">
+                <Link
+                  href="/products"
+                  className="inline-flex items-center gap-3 px-10 py-4 bg-[#0071fe] text-white font-semibold text-sm uppercase tracking-widest hover:bg-[#005fd4] transition-colors"
+                >
+                  Browse equipment
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </Link>
+                <Link
+                  href="/request-quote"
+                  className="inline-flex items-center gap-3 px-10 py-4 border border-slate-300 text-slate-700 font-semibold text-sm uppercase tracking-widest hover:border-slate-500 transition-colors"
+                >
+                  Request a quote
+                </Link>
+              </div>
             </div>
-            <div className="relative h-[400px] lg:h-[600px] w-full rounded-[3rem] overflow-hidden bg-white/10 border border-white/20 backdrop-blur-xl">
-              <Image src="/images/products/iplex.jpg" alt="WeldHub Asset" fill className="object-cover opacity-100 group-hover:scale-110 transition-all duration-[3s]" />
+ 
+            {/* Right: image with a clean overlay stat strip */}
+            <div className="relative">
+              <div className="relative h-[420px] lg:h-[520px] w-full overflow-hidden bg-slate-100">
+                <Image
+                  src="/images/products/iplex.jpg"
+                  alt="WeldHub Equipment"
+                  fill
+                  className="object-cover"
+                />
+                {/* Minimal bottom overlay */}
+                <div className="absolute bottom-0 left-0 right-0 p-6 bg-white/90 backdrop-blur-sm border-t border-slate-100">
+                  <div className="grid grid-cols-3 gap-4">
+                    <div>
+                      <p className="text-[10px] uppercase tracking-widest font-bold text-slate-400 mb-1">Assets</p>
+                      <p className="text-xl font-bold text-slate-900">200+</p>
+                    </div>
+                    <div className="border-l border-slate-200 pl-4">
+                      <p className="text-[10px] uppercase tracking-widest font-bold text-slate-400 mb-1">Verified</p>
+                      <p className="text-xl font-bold text-slate-900">100%</p>
+                    </div>
+                    <div className="border-l border-slate-200 pl-4">
+                      <p className="text-[10px] uppercase tracking-widest font-bold text-slate-400 mb-1">Response</p>
+                      <p className="text-xl font-bold text-[#0071fe]">&lt; 24 hr</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
+ 
           </div>
         </div>
       </section>

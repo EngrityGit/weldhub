@@ -919,7 +919,7 @@ export const products: Product[] = [
     },
 
     inStock: true,
-    featured: true,
+    featured: false,
     createdAt: '2026-01-19',
 
     seo: {
@@ -997,7 +997,7 @@ export const products: Product[] = [
       phone: 'null'
     },
     inStock: true,
-    featured: true,
+    featured: false,
     createdAt: '2026-02-10',
     seo: {
       title: 'Olympus Focus PX 32128PR | WeldHub Edmonton',
@@ -1062,7 +1062,7 @@ export const products: Product[] = [
       phone: 'null'
     },
     inStock: true,
-    featured: true,
+    featured: false,
     createdAt: '2026-02-11',
     seo: {
       title: 'Olympus Omniscan MX2 1664 P2 | Portable Phased Array',
@@ -1192,7 +1192,7 @@ export const products: Product[] = [
       phone: 'null'
     },
     inStock: true,
-    featured: true,
+    featured: false,
     createdAt: '2026-02-13',
     seo: {
       title: 'Thermo Niton XL3t 980 Goldd+ | Handheld XRF Analyzer',
@@ -1257,7 +1257,7 @@ export const products: Product[] = [
       phone: 'null'
     },
     inStock: true,
-    featured: true,
+    featured: false,
     createdAt: '2026-02-14',
     seo: {
       title: 'Olympus IPLEX GX 420 | Industrial Videoscope Edmonton',
@@ -1322,7 +1322,7 @@ export const products: Product[] = [
       phone: 'null'
     },
     inStock: true,
-    featured: true,
+    featured: false,
     createdAt: '2026-02-15',
     seo: {
       title: 'GSSI SIR 4000 Controller | Ground Penetrating Radar',
@@ -1343,7 +1343,7 @@ export const products: Product[] = [
     name: 'Olympus OmniScan X3 32:128',
     description: 'Used portable phased array flaw detector with advanced TFM/FMC imaging and intuitive touchscreen interface.',
     longDescription: 'The OmniScan X3 is Olympus\'s most advanced portable PA UT instrument, featuring Total Focusing Method (TFM) and Full Matrix Capture (FMC) alongside conventional phased array. This 32:128 configuration supports simultaneous acquisition across multiple groups, ideal for weld inspection, corrosion mapping, and composite testing. This is a used unit in excellent working condition, inspected and verified by Pine Environmental technicians.',
-    price: '$75,000 CAD',
+    price: '$76,414 CAD',
     originalPrice: '$79,598 CAD',
     condition: 'Used',
     onSale: true,
@@ -1401,7 +1401,7 @@ export const products: Product[] = [
     createdAt: '2026-06-23',
     seo: {
       title: 'Used Olympus OmniScan X3 32:128 | Pine Environmental Edmonton',
-      description: 'Used Olympus OmniScan X3 32:128 phased array flaw detector with TFM/FMC. $75,000 CAD, bulk pricing available. Verified working condition.',
+      description: 'Used Olympus OmniScan X3 32:128 phased array flaw detector with TFM/FMC. $76,414 CAD, bulk pricing available. Verified working condition.',
       keywords: ['OmniScan X3', 'used phased array', 'TFM FMC', 'used NDT equipment', 'Olympus used', 'phased array flaw detector'],
       ogImage: '/images/products/omiscan_x3.webp',
       canonicalUrl: '/products/olympus-omniscan-x3-32128-used'
