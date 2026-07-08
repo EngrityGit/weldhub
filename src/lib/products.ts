@@ -2148,7 +2148,7 @@ export const products: Product[] = [
     onSale: false,
     discountPercent: 0,
     bulkPricing: null,
-    category: 'Laser Welders',
+    category: 'Laser Welding',
     brand: 'TRM',
     badge: 'Welding',
 
