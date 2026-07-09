@@ -90,17 +90,17 @@ export function buildMetadata({
 // ─── Pre-built page metadata ────────────────────────────────────────────────
 
 export const homeMetadata: Metadata = buildMetadata({
-  title: 'WeldHub — Industrial Equipment Marketplace | Engrity',
+  title: 'WeldHub — Canada’s Welding & NDT Equipment Marketplace',
   description:
-    'Buy and request quotes for certified industrial weld cameras, thermal imaging systems, robotic arms, and NDT equipment. Verified sellers. Fast quotes.',
+    'The leading Canadian marketplace for laser welding systems and NDT equipment. Serving all provinces from Alberta, BC to Ontario and Quebec. Buy, sell, or request quotes for certified industrial systems.',
   keywords: [
-    'industrial equipment marketplace',
-    'weld cameras Canada',
-    'thermal imaging systems',
-    'robotic welding arms',
-    'NDT equipment',
-    'inspection systems',
-    'welding automation',
+    'welding equipment Canada',
+    'NDT equipment Ontario',
+    'laser welding systems Alberta',
+    'industrial equipment BC',
+    'weld inspection Quebec',
+    'non-destructive testing Canada',
+    'Canadian welding marketplace',
     'Engrity WeldHub',
   ],
   canonicalUrl: '/',
@@ -108,58 +108,58 @@ export const homeMetadata: Metadata = buildMetadata({
 })
 
 export const productsMetadata: Metadata = buildMetadata({
-  title: 'All Industrial Products — Weld Cameras, Robotics & NDT | WeldHub',
+  title: 'Welding & NDT Equipment Canada — All Provinces | WeldHub',
   description:
-    'Browse our full catalog of certified industrial products including SWIR thermal cameras, robotic welding arms, phased array NDT systems, GPR controllers, and more.',
+    'Browse our nationwide catalog of laser welders, NDT systems, and robotic arms. Certified equipment available for shipping to Toronto, Calgary, Vancouver, Montreal, and across all Canadian provinces.',
   keywords: [
-    'industrial products',
-    'weld cameras',
-    'robotic arms',
-    'NDT equipment',
-    'thermal cameras',
-    'phased array UT',
-    'GPR controllers',
-    'XRF analyzers',
+    'buy welding gear Canada',
+    'NDT supplies Toronto',
+    'laser welders Calgary',
+    'welding automation Vancouver',
+    'phased array UT Canada',
+    'industrial supplies Montreal',
+    'Saskatchewan industrial equipment',
+    'Manitoba welding systems',
   ],
   canonicalUrl: '/products',
   ogImage: '/images/og-image.jpg',
 })
 
 export const requestQuoteMetadata: Metadata = buildMetadata({
-  title: 'Request a Custom Quote — Industrial Equipment | WeldHub',
+  title: 'Request a Quote — Shipping Across All Canadian Provinces | WeldHub',
   description:
-    'Submit a quote request for any industrial product on WeldHub. Our team responds within 24 hours with customized pricing, technical consultation, and flexible terms.',
+    'Get custom pricing on welding and NDT systems with shipping available to every province in Canada. Our technical team provides fast quotes for Canadian industrial projects.',
   keywords: [
-    'request quote industrial equipment',
-    'weld camera quote',
-    'robotic arm pricing',
-    'NDT equipment rental',
-    'Engrity quote',
+    'welding quote Canada',
+    'NDT equipment pricing Canada',
+    'industrial equipment RFQ Ontario',
+    'Alberta welding supplies quote',
+    'Canada-wide industrial shipping',
   ],
   canonicalUrl: '/request-quote',
   ogImage: '/images/og-image.jpg',
 })
 
 export const privacyMetadata: Metadata = buildMetadata({
-  title: 'Privacy Policy | WeldHub by Engrity',
+  title: 'Privacy Policy | WeldHub Canada',
   description:
-    'Read the WeldHub Privacy Policy to understand how we collect, use, and protect your personal data, including AI-assisted features.',
-  keywords: ['privacy policy', 'WeldHub privacy', 'data protection', 'Engrity privacy'],
+    'Read how WeldHub protects the data of our Canadian users and partners across the industrial welding and NDT sectors.',
+  keywords: ['privacy policy Canada', 'PIPEDA compliance', 'WeldHub privacy', 'data protection Canada'],
   canonicalUrl: '/privacy',
 })
 
 export const termsMetadata: Metadata = buildMetadata({
-  title: 'Terms & Conditions | WeldHub by Engrity',
+  title: 'Terms & Conditions | WeldHub Canada Marketplace',
   description:
-    'Review the WeldHub Terms and Conditions governing use of our industrial equipment marketplace, including purchase terms and seller obligations.',
-  keywords: ['terms and conditions', 'WeldHub terms', 'marketplace terms', 'Engrity legal'],
+    'Review the terms governing the purchase and sale of welding and NDT equipment within Canada on the WeldHub platform.',
+  keywords: ['Canadian marketplace terms', 'WeldHub legal', 'industrial equipment sales Canada'],
   canonicalUrl: '/terms',
 })
 
 export const cookiesMetadata: Metadata = buildMetadata({
-  title: 'Cookie Policy | WeldHub by Engrity',
+  title: 'Cookie Policy | WeldHub Canada',
   description:
-    'Learn how WeldHub uses cookies and similar technologies, including AI-powered features, to improve your experience on our platform.',
-  keywords: ['cookie policy', 'WeldHub cookies', 'AI data collection', 'Engrity cookies'],
+    'Information on how WeldHub uses cookies to improve the experience for our Canadian welding and NDT industry clients.',
+  keywords: ['cookie policy', 'WeldHub Canada cookies', 'user experience'],
   canonicalUrl: '/cookies',
 })
