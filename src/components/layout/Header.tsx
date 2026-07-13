@@ -71,8 +71,8 @@ export default function Header() {
         <div className="relative bg-[#0071fe] text-white overflow-hidden py-2 text-sm font-medium border-b border-white/10">
           <div className="flex whitespace-nowrap animate-marquee">
             <span className="px-4">
-              WeldHub X Canaweld — Official Distributors for CanaWeld Equipments in Western Canada — 
-              Contact us at <a href="mailto:sales@engrity.com" className="font-bold underline ml-1">WeldHub Sales</a> to get Additional Discount!
+              WeldHub Partners with Leading Welding & NDT Equipment Manufacturers Across Western Canada
+              Contact us at <a href="mailto:sales@engrity.com" className="font-bold underline ml-1">WeldHub Sales</a> to get Additional Discounts!
             </span>
           </div>
         </div>
