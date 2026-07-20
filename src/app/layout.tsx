@@ -5,6 +5,8 @@ import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
 import { CartProvider } from '@/context/CartContext'
 import { OrganizationSchema, WebsiteSchema } from '@/components/seo/StructuredData'
+import SmoothScroll from '@/components/providers/SmoothScroll'
+
 
 
 const inter = Inter({ 
@@ -102,6 +104,7 @@ export default function RootLayout({
         <OrganizationSchema />
 <WebsiteSchema />
         <CartProvider>
+          <SmoothScroll>
           {/* Skip to main content for accessibility */}
           <a 
             href="#main-content" 
@@ -119,6 +122,8 @@ export default function RootLayout({
             
             <Footer />
           </div>
+
+          </SmoothScroll>
           
           {/* Structured Data for Organization */}
           <script
